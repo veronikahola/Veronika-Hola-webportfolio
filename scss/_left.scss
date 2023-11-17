@@ -1,0 +1,67 @@
+@use "var";
+
+
+
+.logo {
+    font-family: var.$font-special;
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    word-spacing: 11px;
+    margin-bottom: 10px;
+
+    background: linear-gradient(to right, var.$color-first 35%, var.$color-light 50%, var.$color-second 90%);
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 1;
+}
+
+
+
+
+// navigation
+.nav {
+    margin: 100px 0 0 0;
+    padding: 0;
+
+    &__item {
+        display: block;
+        list-style: none;
+        padding: 10px;
+        text-decoration: none;
+        color: var.$color-light;
+        text-transform: uppercase;
+        transition: color 0.1s, font-weight 0.1s, transform 0.1s;
+    }
+}
+
+.inactive:hover {
+    color: #FF5CB3;
+}
+
+
+
+
+
+// icons
+.icons {
+    position: fixed;
+    bottom: 100px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.icon {
+    transition: transform 0.3s ease;
+    padding: 20px 10px;
+
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:hover {
+        transform: scale(1.3); 
+    }
+}
