@@ -10,7 +10,7 @@
     word-spacing: 11px;
     margin-bottom: 10px;
 
-    background: linear-gradient(to right, var.$color-first 35%, var.$color-light 50%, var.$color-second 90%);
+    background: linear-gradient(to right, var.$color-first 20%, var.$color-light 40%, var.$color-second 90%);
     -webkit-background-clip: text;
     color: transparent;
     line-height: 1;
@@ -38,6 +38,9 @@
 .inactive:hover {
     color: #FF5CB3;
 }
+
+
+
 
 
 

@@ -34,7 +34,7 @@ p, h1 {
 }
 
 .color-first {
-  color: #C2605C;
+  color: #AFFC41;
 }
 
 .color-second {
@@ -61,7 +61,7 @@ p, h1 {
   letter-spacing: 3.5px;
   word-spacing: 11px;
   margin-bottom: 10px;
-  background: linear-gradient(to right, #C2605C 35%, #E9DCD8 50%, #FF5CB3 90%);
+  background: linear-gradient(to right, #AFFC41 20%, #E9DCD8 40%, #FF5CB3 90%);
   -webkit-background-clip: text;
   color: transparent;
   line-height: 1;
@@ -136,6 +136,7 @@ p, h1 {
   opacity: 0;
 }
 .firework:hover {
+  transition: 0.5s ease-out;
   color: #E9DCD8;
 }
 .firework:hover .fw1 {

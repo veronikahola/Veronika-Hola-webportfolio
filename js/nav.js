@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll('.nav__item');
 
     const moveRight = (element) => {
-        gsap.to(element, { x: 30, fontWeight: 800, color: '#C2605C' });
+        gsap.to(element, { x: 30, fontWeight: 800, color: '#AFFC41' });
     };
 
     const moveLeft = (element) => {
