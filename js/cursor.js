@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const cursorHalo = document.querySelector(".cursor-halo");
 
     document.addEventListener("mousemove", (e) => {
-        gsap.to(cursorHalo, { duration: 0, left: e.clientX - 350, top: e.clientY - 350, ease: "power2.out" });
+        gsap.to(cursorHalo, { duration: 0, left: e.clientX - 400, top: e.clientY - 400, ease: "power2.out" });
     });
 
     // Show cursor halo on mouseenter

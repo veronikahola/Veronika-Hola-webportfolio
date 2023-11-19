@@ -7,4 +7,8 @@
     &__goodbye {
         padding-top: 10px;
     }
+
+    &__text {
+        color: var.$color-fade;
+    }
 }

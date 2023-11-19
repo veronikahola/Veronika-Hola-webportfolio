@@ -4,18 +4,31 @@
 
 .logo {
     font-family: var.$font-special;
-    font-size: 60px;
+    font-size: 50px;
     text-transform: uppercase;
-    letter-spacing: 3.5px;
-    word-spacing: 11px;
+    letter-spacing: 1px;
     margin-bottom: 10px;
 
     background: linear-gradient(to right, var.$color-first 20%, var.$color-light 40%, var.$color-second 90%);
     -webkit-background-clip: text;
     color: transparent;
     line-height: 1;
+
+    @media screen and (min-width: 768px) {
+        font-size: 60px;
+        letter-spacing: 3.5px;
+        word-spacing: 11px;
+    }
 }
 
+
+.meta {
+    color: var.$color-fade;
+
+    @media screen and (min-width: 768px) {
+        color: var.$color-light;
+    }
+}
 
 
 
@@ -23,6 +36,10 @@
 .nav {
     margin: 100px 0 0 0;
     padding: 0;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 
     &__item {
         display: block;
@@ -41,17 +58,20 @@
 
 
 
-
-
-
-
-
 // icons
 .icons {
-    position: fixed;
     bottom: 100px;
     display: flex;
     align-items: center;
+    width: 50%;
+    margin: 20px auto;
+    
+    
+
+    @media screen and (min-width: 768px) {
+        position: fixed;
+        margin: 0;
+    }
 }
 
 
@@ -59,12 +79,53 @@
 .icon {
     transition: transform 0.3s ease;
     padding: 20px 10px;
+    margin: 0 auto;
 
-    &:first-child {
-        padding-left: 0;
+    @media screen and (min-width: 768px) {
+        margin: 0;
+
+        &:first-child {
+            padding-left: 0;
+        }
     }
 
     &:hover {
         transform: scale(1.3); 
+    }
+}
+
+
+
+
+
+
+.mobile-menu {
+    display: none;
+
+    @media (max-width: 768px) {
+        background-color: rgb(26, 26, 26, 0.9);
+        display: block; 
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
+
+
+
+.mobile-nav {
+    margin: 0;
+    padding: 0;
+ 
+    & li.active {
+        font-weight: 800;
+        color: var.$color-first;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 20px 0;
+        margin: 0;
+     
     }
 }
