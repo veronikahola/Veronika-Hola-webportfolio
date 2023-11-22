@@ -39,11 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll('.nav__item');
 
     const moveRight = (element) => {
-        gsap.to(element, { x: 30, fontWeight: 800, color: '#AFFC41' });
+        gsap.to(element, { x: 50, fontWeight: 800, color: '#A9E5BB', opacity: 1});
     };
 
     const moveLeft = (element) => {
-        gsap.to(element, { x: 0, fontWeight: 400, color: '#E9DCD8' });
+        gsap.to(element, { x: 0, fontWeight: 400, color: '#E9DCD8', opacity: 0.5});
     };
 
     links.forEach((link, index) => {
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         link.addEventListener('mouseenter', function () {
             const isActive = this.classList.contains('active');
             if (!isActive) {
-                gsap.to(this, { x: 30, fontWeight: 800, color: '#FF5CB3' });
+                gsap.to(this, { x: 50, fontWeight: 800, color: '#A9E5BB', opacity: 1 });
             }
         });
 
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const scrollPosition = window.scrollY;
 
         sections.forEach((section, index) => {
-            const sectionTop = section.offsetTop - 100;
+            const sectionTop = section.offsetTop - 150;
             const sectionBottom = sectionTop + section.clientHeight;
 
             if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {

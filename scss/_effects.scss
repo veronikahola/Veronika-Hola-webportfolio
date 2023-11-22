@@ -6,7 +6,7 @@
     position: fixed;
     width: 800px;
     height: 800px;
-    background: radial-gradient(circle, rgba(234, 29, 135, 0.05) 0%,  rgba(255,255,255,0) 70%);
+    background: radial-gradient(circle, rgba(148, 75, 187, 0.1) 0%,  rgba(255,255,255,0) 70%);
     border-radius: 50%;
     pointer-events: none;
 }
@@ -195,8 +195,6 @@
     }
 }
 
-
-
 @keyframes fw7 {
     0% {
         transform: translateY(0) translateX(0);
@@ -215,7 +213,6 @@
         opacity: 0;
     }
 }
-
 
 @keyframes fw8 {
     0% {
@@ -271,5 +268,35 @@
     100% {
         transform: translateY(50px) translateX(75px);
         opacity: 0;
+    }
+}
+
+
+
+
+// reveal effect
+.reveal{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s all ease;
+
+
+    &--opacity {
+        transform: translateY(0);
+        transition: 1s all ease;
+    }
+
+    &--phone {
+        @media screen and (min-width: 768px){
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    &.active{
+        transform: translateY(0);
+        opacity: 1;
     }
 }

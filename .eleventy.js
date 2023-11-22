@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("/js/cursor.js");
   eleventyConfig.addPassthroughCopy("/js/gsap.min.js");
   eleventyConfig.addPassthroughCopy("/js/nav.js");
+  eleventyConfig.addPassthroughCopy("/js/reveal.js");
 
 
  
