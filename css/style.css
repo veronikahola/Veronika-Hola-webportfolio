@@ -172,6 +172,7 @@ p, h1 {
     background-color: rgba(26, 26, 26, 0.9);
     display: block;
     position: fixed;
+    z-index: 4;
     left: 0;
     top: 0;
     width: 100%;
@@ -331,17 +332,27 @@ p, h1 {
 .project__container {
   border: 1px solid #E9DCD8;
   border-radius: 10px;
-  padding: 10px 0;
   overflow: hidden;
 }
 .project__container--screen {
-  width: 80%;
+  width: 95%;
+}
+@media screen and (min-width: 650px) {
+  .project__container--screen {
+    width: 90%;
+  }
 }
 .project__container--phone {
   width: 25%;
   position: absolute;
   right: 0;
-  bottom: -30px;
+  bottom: -10px;
+}
+@media screen and (min-width: 650px) {
+  .project__container--phone {
+    bottom: -20px;
+    width: 20%;
+  }
 }
 .project__image {
   width: 100%;
@@ -355,28 +366,64 @@ p, h1 {
 .project__image--c {
   transition: transform 3.5s ease-in-out;
 }
+.project__image--d {
+  transition: transform 3.5s ease-in-out;
+}
 .project__frame {
-  height: 300px;
+  height: 250px;
   overflow: hidden; /* Hide overflow */
   position: relative;
+}
+@media screen and (min-width: 650px) {
+  .project__frame {
+    height: 300px;
+  }
 }
 .project__frame--screen {
   opacity: 0.9;
 }
 .project__frame--phone {
-  height: 270px;
+  height: 200px;
+}
+@media screen and (min-width: 650px) {
+  .project__frame--phone {
+    height: 240px;
+  }
 }
 .project__frame:hover .project__image {
   opacity: 1;
 }
 .project__frame:hover .project__image--a {
-  transform: translateY(-67%);
+  transform: translateY(-66%);
+}
+@media screen and (min-width: 650px) {
+  .project__frame:hover .project__image--a {
+    transform: translateY(-71%);
+  }
 }
 .project__frame:hover .project__image--b {
-  transform: translateY(-25%);
+  transform: translateY(-19%);
+}
+@media screen and (min-width: 650px) {
+  .project__frame:hover .project__image--b {
+    transform: translateY(-17%);
+  }
 }
 .project__frame:hover .project__image--c {
-  transform: translateY(-77%);
+  transform: translateY(-66%);
+}
+@media screen and (min-width: 650px) {
+  .project__frame:hover .project__image--c {
+    transform: translateY(-71%);
+  }
+}
+.project__frame:hover .project__image--d {
+  transform: translateY(-75%);
+}
+@media screen and (min-width: 650px) {
+  .project__frame:hover .project__image--d {
+    transform: translateY(-75%);
+  }
 }
 
 .footer {
