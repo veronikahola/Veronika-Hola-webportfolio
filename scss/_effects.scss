@@ -14,13 +14,75 @@
 
 
 
+
+// marv
+.dog {
+    cursor: pointer;
+    position: relative;
+
+    &__img {
+        position: absolute;
+        width: 110px;
+        z-index: -1;
+        top: 20px;
+        right: -30px;
+        opacity: 0;
+        transition: .5s ease-in-out;
+    }
+
+    &:hover .dog__img {
+        transform: translateY(-170px) translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+// bikejoring
+.bikejoring {
+    cursor: pointer;
+
+    &__img {
+        position: absolute;
+        width: 80px;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+
+    &:hover .bikejoring__img {
+        animation: bj 2.5s ease-in-out;
+    }
+}
+
+@keyframes bj {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+
+    20% {
+        transform: translateY(-30px) translateX(0);
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-30px) translateX(450px);
+        opacity: 0;
+    }
+}
+
+
+
+
 // firework animation
 .firework {
     position: relative;
     cursor: pointer;
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 0;
 
     &__img {
         position: absolute;
@@ -28,6 +90,7 @@
         bottom: 8px;
         left: 30%;
         opacity: 0;
+        font-size: 10px;
     }
 
     &:hover {
@@ -275,32 +338,6 @@
 
 
 // reveal effect
-// .reveal{
-//     position: relative;
-//     transform: translateY(100px);
-//     opacity: 0;
-//     transition: 1s all ease;
-
-
-//     &--opacity {
-//         transform: translateY(0);
-//         transition: 1s all ease;
-//     }
-
-//     &--phone {
-//         @media screen and (min-width: 768px){
-//             opacity: 1;
-//             transform: translateY(0);
-//         }
-//     }
-
-
-//     &.active{
-//         transform: translateY(0);
-//         opacity: 1;
-//     }
-// }
-
 .reveal {
     opacity: 0;
     transition: opacity 0.5s ease;

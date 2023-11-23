@@ -69,17 +69,39 @@
 // about
 .about {
     padding-top: 8px;
-}
 
-.czechitas {
-    cursor: pointer
-    ;
-    &:hover {
-        color: #FA54AC;
-        transition: color 0.5s;
+    &__text {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__hobbies {
+        position: relative;
+        z-index: 3;
     }
 }
 
+.czechitas {
+    cursor: pointer;
+    transition: color 0.5s;
+    
+    &:hover {
+        color: #FA54AC;  
+    }
+}
+
+
+.udemy {
+    cursor: pointer;
+    transition: color 0.5s;
+    
+    &:hover {
+        color: #9E27E9;
+    }
+}
 
 
 
