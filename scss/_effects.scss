@@ -275,28 +275,38 @@
 
 
 // reveal effect
-.reveal{
-    position: relative;
-    transform: translateY(100px);
+// .reveal{
+//     position: relative;
+//     transform: translateY(100px);
+//     opacity: 0;
+//     transition: 1s all ease;
+
+
+//     &--opacity {
+//         transform: translateY(0);
+//         transition: 1s all ease;
+//     }
+
+//     &--phone {
+//         @media screen and (min-width: 768px){
+//             opacity: 1;
+//             transform: translateY(0);
+//         }
+//     }
+
+
+//     &.active{
+//         transform: translateY(0);
+//         opacity: 1;
+//     }
+// }
+
+.reveal {
     opacity: 0;
-    transition: 1s all ease;
+    transition: opacity 0.5s ease;
 
-
-    &--opacity {
-        transform: translateY(0);
-        transition: 1s all ease;
-    }
-
-    &--phone {
-        @media screen and (min-width: 768px){
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-
-    &.active{
-        transform: translateY(0);
+    &.active {
         opacity: 1;
     }
 }
+

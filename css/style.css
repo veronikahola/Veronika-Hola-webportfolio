@@ -593,22 +593,9 @@ p, h1 {
   }
 }
 .reveal {
-  position: relative;
-  transform: translateY(100px);
   opacity: 0;
-  transition: 1s all ease;
-}
-.reveal--opacity {
-  transform: translateY(0);
-  transition: 1s all ease;
-}
-@media screen and (min-width: 768px) {
-  .reveal--phone {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  transition: opacity 0.5s ease;
 }
 .reveal.active {
-  transform: translateY(0);
   opacity: 1;
 }/*# sourceMappingURL=style.css.map */

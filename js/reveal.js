@@ -1,17 +1,23 @@
+
+
 function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
-  
-    for (var i = 0; i < reveals.length; i++) {
+  var reveals = document.querySelectorAll(".reveal");
+
+  reveals.forEach(function (element) {
       var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 100;
-  
+      var elementTop = element.getBoundingClientRect().top;
+      var elementVisible = 150;
+
       if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
+          element.classList.add("active");
       } else {
-        reveals[i].classList.remove("active");
+          element.classList.remove("active");
       }
-    }
-  }
-  
-  window.addEventListener("scroll", reveal);
+  });
+}
+
+// Attach the reveal function to the scroll event
+window.addEventListener("scroll", reveal);
+
+// Initial call to reveal function to check elements on page load
+reveal();
