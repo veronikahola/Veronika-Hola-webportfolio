@@ -279,7 +279,6 @@ p, h1 {
   padding: 20px 10px;
   text-align: center;
   border-radius: 10px;
-  cursor: pointer;
 }
 .skills__frame:hover {
   background-color: rgba(203, 173, 164, 0.05);
@@ -316,6 +315,10 @@ p, h1 {
 .project {
   margin-bottom: 100px;
 }
+.project__link {
+  color: #E9DCD8;
+  text-decoration: none;
+}
 .project:last-child {
   margin-bottom: 0;
 }
@@ -349,6 +352,9 @@ p, h1 {
 .project__image--b {
   transition: transform 1s ease-in-out;
 }
+.project__image--c {
+  transition: transform 3.5s ease-in-out;
+}
 .project__frame {
   height: 300px;
   overflow: hidden; /* Hide overflow */
@@ -369,6 +375,9 @@ p, h1 {
 .project__frame:hover .project__image--b {
   transform: translateY(-25%);
 }
+.project__frame:hover .project__image--c {
+  transform: translateY(-77%);
+}
 
 .footer {
   margin: 100px 0 0 0;
@@ -379,6 +388,33 @@ p, h1 {
 }
 .footer__text {
   opacity: 0.5;
+}
+
+.cv {
+  padding-top: 10px;
+}
+.cv__link {
+  text-decoration: none;
+  color: #E9DCD8;
+  font-weight: 800;
+  display: inline-block;
+  position: relative;
+}
+.cv__link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #A9E5BB;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+.cv__link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 /* Cursor Halo */

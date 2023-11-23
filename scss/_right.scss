@@ -126,7 +126,6 @@
         padding: 20px 10px;
         text-align: center;
         border-radius: 10px;
-        cursor: pointer;
 
         &:hover {
             background-color: rgb(203, 173, 164, 0.05);
@@ -183,6 +182,11 @@
 .project {
     margin-bottom: 100px;
 
+    &__link {
+        color: var.$color-light;
+        text-decoration: none;
+    }
+
     &:last-child {
         margin-bottom: 0;
     }
@@ -223,6 +227,10 @@
         &--b {
             transition: transform 1s ease-in-out;
         }
+
+        &--c {
+            transition: transform 3.5s ease-in-out;
+        }
     }
 
     &__frame {
@@ -242,12 +250,16 @@
             opacity: 1;
 
             &--a {
-            transform: translateY(-67%);
+                transform: translateY(-67%);
             }
 
             &--b {
                 transform: translateY(-25%);
-                }
+            }
+
+            &--c {
+                transform: translateY(-77%);
+            }
         }
     }
     
@@ -282,3 +294,38 @@
         opacity: 0.5;
     }
 }
+
+
+
+.cv {
+    padding-top: 10px;
+
+    &__link {
+    text-decoration: none;
+    color: var.$color-light;
+    font-weight: 800;
+    display: inline-block;
+    position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var.$color-first;
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        
+    }
+}
+
+
