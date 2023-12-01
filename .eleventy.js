@@ -7,9 +7,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("/js/gsap.min.js");
   eleventyConfig.addPassthroughCopy("/js/nav.js");
   eleventyConfig.addPassthroughCopy("/js/nav-mc.js");
+  eleventyConfig.addPassthroughCopy("/js/nav-koh.js");
   eleventyConfig.addPassthroughCopy("/js/reveal.js");
-  eleventyConfig.addPassthroughCopy("/js/magnify.js");
-  eleventyConfig.addPassthroughCopy("/js/siema.min.js");
   eleventyConfig.addPassthroughCopy("cv.pdf");
 
 

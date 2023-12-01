@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veronika Holá</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&family=Vina+Sans&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+
+
+
+
+
+<body class="body">
+
+
+
+<!-- for phone menu (hidden on wide screen) -->
+
+
+
+<div class="wrapper">
+    <div class="mobile-menu">
+        <ul class="mobile-nav mobile-nav--koh">
+            <li class="mobile-nav__item" data-target="about">about the Final Project</li>
+            <li class="mobile-nav__item" data-target="research">user research</li>
+            <li class="mobile-nav__item" data-target="design">design process</li>
+            <li class="mobile-nav__item" data-target="testing">testing</li>
+            <li class="mobile-nav__item" data-target="conclusion">conclusion</li>
+        </ul>
+    </div>
+
+<!-- left side -->
+    <section class="left">
+
+        <h1 class="logo-koh">Kohoutky</h1>
+
+        <p class="meta-koh">Website for an imaginery local farm was created as a final project for <span class="callout">"Become a Coder"</span> course by <span class="callout">Czechitas</span>.This project was my first experience in independently developing a website from scratch.</p>
+
+
+      
+
+        <div class="nav">
+            <a href="#about" class="nav__item">about the Final Project</a>
+            <a href="#research" class="nav__item">user research</a>
+            <a href="#design" class="nav__item">design process</a>
+            <a href="#testing" class="nav__item">testing</a>
+            <a href="#conclusion" class="nav__item">conclusion</a>
+        </div>
+
+
+      
+
+        <div class="arrows">
+            <div class="arrows__left">
+                <a class="arrows__link underline underline--koh arrows--koh" href="/index.html">Go back</a>
+            </div>
+
+            <div class="arrows__right">
+                <a class="arrows__link underline underline--koh arrows--koh" href="www.kohoutky.netlify.app">Visit website</a>
+            </div>
+        </div>
+    </section>
+
+
+  
+
+
+
+<!-- right side -->
+    <section class="right">
+
+        {% include "partials/koh-right.njk" %}
+
+    </section>
+
+    
+
+</div>
+
+
+<!-- for cursor effects -->
+<div class="cursor-neutral"></div>
+
+
+
+
+
+<script src="/js/gsap.min.js"></script>
+<script src="/js/cursor-neutral.js"></script>
+<script src="/js/nav-koh.js"></script>
+<script src="/js/reveal.js"></script>
+
+
+
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var modal = document.getElementById('myModal');
+        var modalImage = document.getElementById('modalImage');
+        var images = document.querySelectorAll('.open');
+        var closeBtn = document.querySelector('.close');
+    
+        images.forEach(function (image) {
+            image.addEventListener('click', function () {
+                modal.style.display = 'block';
+                modalImage.src = this.src;
+            });
+        });
+    
+        closeBtn.addEventListener('click', function () {
+            modal.style.display = 'none';
+        });
+    
+        window.addEventListener('click', function (event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+    
+    </script>
+
+
+
+</body>
+</html>
