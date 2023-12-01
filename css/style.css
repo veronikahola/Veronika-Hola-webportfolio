@@ -777,13 +777,15 @@ p, h1 {
 .arrows {
   bottom: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 350px;
+  margin: 30px auto 50px auto;
 }
 @media screen and (min-width: 1000px) {
   .arrows {
     position: fixed;
     margin: 0;
+    justify-content: space-between;
   }
 }
 .arrows__right {
@@ -803,6 +805,11 @@ p, h1 {
   width: 90%;
   bottom: 50px;
   right: 0;
+}
+@media screen and (max-width: 1000px) {
+  .arrows__img {
+    display: none;
+  }
 }
 
 .mc-subcategory {
@@ -865,9 +872,15 @@ p, h1 {
 
 .competition {
   display: flex;
-  flex: 1 1 30%;
+  flex-direction: column;
   gap: 20px;
-  padding: 0;
+}
+@media screen and (min-width: 650px) {
+  .competition {
+    flex-direction: row;
+    flex: 1 1 30%;
+    padding: 0;
+  }
 }
 
 .flip-card {
@@ -940,9 +953,14 @@ li::before {
 
 .goal {
   display: flex;
-  padding: 0 40px;
+  padding: 0 20px;
   margin: 20px auto 0 auto;
   opacity: 50%;
+}
+@media screen and (min-width: 650px) {
+  .goal {
+    padding: 0 40px;
+  }
 }
 .goal__logo {
   font-family: "Reenie Beanie", cursive;
@@ -951,7 +969,7 @@ li::before {
 }
 
 .problems-card {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .problems-card:hover .goal {
   color: #BB8B9E;
@@ -1019,4 +1037,8 @@ li::before {
 
 .delete-margin {
   margin-bottom: 0;
+}
+
+.mobile-nav--mc li.active {
+  color: #F6BD60;
 }/*# sourceMappingURL=style.css.map */

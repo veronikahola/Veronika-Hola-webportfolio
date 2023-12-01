@@ -18,12 +18,16 @@
 .arrows {
     bottom: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 350px;
+    margin: 30px auto 50px auto;
+
+
 
     @media screen and (min-width: 1000px) {
         position: fixed;
         margin: 0;
+        justify-content: space-between;
     }
 
     &__right {
@@ -46,6 +50,10 @@
         width: 90%;
         bottom: 50px;
         right: 0;
+
+        @media screen and (max-width: 1000px) {
+            display: none;
+        }
     }
 }
 
@@ -133,9 +141,15 @@
 // competitin and cards
 .competition {
     display: flex;
-    flex: 1 1 30%;
+    flex-direction: column;
     gap: 20px;
-    padding: 0;
+    
+
+    @media screen and (min-width: 650px) {
+        flex-direction: row;
+        flex: 1 1 30%;
+        padding: 0;
+    }
 }
 
 
@@ -222,9 +236,13 @@ li {
 // problem statement
 .goal {
     display: flex;
-    padding: 0 40px;
+    padding: 0 20px;
     margin: 20px auto 0 auto;
     opacity: 50%;
+
+    @media screen and (min-width: 650px) {
+        padding: 0 40px;
+    }
 
     &__logo {
         font-family: var.$font-mc-logo;
@@ -234,7 +252,7 @@ li {
 }
 
 .problems-card {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     &:hover .goal {
         color: var.$color-mc-second;
@@ -306,4 +324,10 @@ li {
 
 .delete-margin {
     margin-bottom: 0;
+}
+
+.mobile-nav--mc li.active {
+ 
+        color: var.$color-mc-first;
+    
 }
