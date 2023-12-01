@@ -3,9 +3,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("/js/cursor.js");
+  eleventyConfig.addPassthroughCopy("/js/cursor-neutral.js");
   eleventyConfig.addPassthroughCopy("/js/gsap.min.js");
   eleventyConfig.addPassthroughCopy("/js/nav.js");
+  eleventyConfig.addPassthroughCopy("/js/nav-mc.js");
   eleventyConfig.addPassthroughCopy("/js/reveal.js");
+  eleventyConfig.addPassthroughCopy("/js/magnify.js");
+  eleventyConfig.addPassthroughCopy("/js/siema.min.js");
   eleventyConfig.addPassthroughCopy("cv.pdf");
 
 

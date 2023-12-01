@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veronika Holá</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&family=Vina+Sans&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700&family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Veronika Holá">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://veronikahola.com/images/meta.png">
+	<meta property="og:url" content="https://veronikahola.com">
+
+	<meta property="og:locale" content="cs_CZ">
+</head>
+
+
+
+
+
+<body class="body">
+
+
+
+<!-- for phone menu (hidden on wide screen) -->
+
+
+
+<div class="wrapper">
+    <div class="mobile-menu">
+        <ul class="mobile-nav">
+            <li class="mobile-nav__item" data-target="research">user research</li>
+            <li class="mobile-nav__item" data-target="problems">problems &amp design goals</li>
+            <li class="mobile-nav__item" data-target="design">design process</li>
+            <li class="mobile-nav__item" data-target="testing">testing</li>
+            <li class="mobile-nav__item" data-target="conclusion">conclusion</li>
+        </ul>
+    </div>
+
+<!-- left side -->
+    <section class="left">
+
+        <h1 class="logo-mc">Michaela Cibulková</h1>
+
+        <p class="meta-mc">Website for a <span class="callout">photographer</span> specializing in <span class="callout">dog photography</span>. Michaela wishes to have a place with all the info a client might need - a bit about her background, portfolio, price and services.</p>
+
+
+      
+
+        <div class="nav">
+            <a href="#research" class="nav__item">user research</a>
+            <a href="#problems" class="nav__item">problems &amp design goals</a>
+            <a href="#design" class="nav__item">design process</a>
+            <a href="#testing" class="nav__item">testing</a>
+            <a href="#conclusion" class="nav__item">conclusion</a>
+        </div>
+
+
+      
+
+        <div class="arrows">
+            <div class="arrows__left">
+                <a class="arrows__link underline" href="https://veronikahola.com">Go back</a>
+            </div>
+
+            <div class="arrows__right">
+                <a class="arrows__link underline" href="www.mcibulkova.netlify.app">Visit website</a>
+                <img class="arrows__img" src="/images/casestudy/jj.svg" alt="poodle illustration">
+            </div>
+        </div>
+    </section>
+
+
+  
+
+
+
+<!-- right side -->
+    <section class="right">
+
+        {% include "partials/mc-right.njk" %}
+
+    </section>
+
+    
+
+</div>
+
+
+<!-- for cursor effects -->
+<div class="cursor-neutral"></div>
+
+
+
+
+
+<script src="/js/gsap.min.js"></script>
+<script src="/js/cursor-neutral.js"></script>
+<script src="/js/nav-mc.js"></script>
+<script src="/js/reveal.js"></script>
+<script src="/js/magnify.js"></script>
+<script src="/js/siema.min.js"></script>
+
+
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var modal = document.getElementById('myModal');
+        var modalImage = document.getElementById('modalImage');
+        var images = document.querySelectorAll('.open');
+        var closeBtn = document.querySelector('.close');
+    
+        images.forEach(function (image) {
+            image.addEventListener('click', function () {
+                modal.style.display = 'block';
+                modalImage.src = this.src;
+            });
+        });
+    
+        closeBtn.addEventListener('click', function () {
+            modal.style.display = 'none';
+        });
+    
+        window.addEventListener('click', function (event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+    
+    </script>
+
+
+
+</body>
+</html>

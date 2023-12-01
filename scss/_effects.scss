@@ -11,6 +11,15 @@
     pointer-events: none;
 }
 
+.cursor-neutral {
+    position: fixed;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(243, 245, 242, 0.03) 0%,  rgba(78, 195, 20, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
 
 
 
