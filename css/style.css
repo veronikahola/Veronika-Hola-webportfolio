@@ -1047,6 +1047,10 @@ li::before {
   color: #5C6F68;
 }
 
+.cs {
+  margin-top: 10px;
+}
+
 .logo-koh {
   font-family: "Sacramento", cursive;
   color: #C5BBAC;
