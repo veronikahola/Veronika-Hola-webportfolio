@@ -802,7 +802,7 @@ p, h1 {
 }
 .arrows__img {
   position: absolute;
-  width: 90%;
+  width: 200%;
   bottom: 50px;
   right: 0;
 }
