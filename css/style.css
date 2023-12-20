@@ -500,6 +500,7 @@ p, h1 {
   right: -30px;
   opacity: 0;
   transition: 0.5s ease-in-out;
+  pointer-events: none;
 }
 .dog:hover .dog__img {
   transform: translateY(-170px) translateX(0);
@@ -516,6 +517,7 @@ p, h1 {
   top: 0;
   left: 0;
   opacity: 0;
+  pointer-events: none;
 }
 .bikejoring:hover .bikejoring__img {
   animation: bj 2.5s ease-in-out;
